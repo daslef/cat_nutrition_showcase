@@ -3,18 +3,17 @@
     <div class="wrapper">
       <div class="title">Ты сегодня покормил кота?</div>
       <div class="cards">
-        <Card color="#767676">
-          <template slot="product_taste">с салями</template>
+        <Card color="#1698d9" product_name='fua-gra'>
           <template slot="product_dose"></template>
-          <template slot="product_gifts">шуршалка</template>
-          <template slot="weight">2</template>
+          <template slot="weight">0.5</template>
         </Card>
-        <Card color="#727236"/>
-        <Card color="#38FE65">
-          <template slot="product_taste">с лососем</template>
+        <Card color="#d91667" product_name='fish'>
           <template slot="product_dose"></template>
-          <template slot="product_gifts">5 мышек</template>
-          <template slot="weight">2</template>
+           <template slot="weight">2</template>
+           </Card>
+        <Card color="#b3b3b3" product_name='chicken' disabled=True >
+          <template slot="product_dose"></template>
+          <template slot="weight">5</template>
         </Card>
       </div>
     </div>
@@ -34,7 +33,8 @@ export default {
 
 <style>
 @import url(
-  https://fonts.googleapis.com/css?family=Exo+2:500,600,700,800&subset=latin,cyrillic);
+  'https://fonts.googleapis.com/css?family=Exo+2:500,600,700,800&subset=latin,cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Exo+2:100&subset=cyrillic');
 
 html,
 body {
@@ -45,7 +45,7 @@ body {
 
 body {
   background-image: url("https://drive.google.com/uc?id=1Lc65WGEN_K-RzHET5tC-E0biKZvc6QXU");
-  display: border-box;
+  display: flex;
   font-family: "Exo 2", sans serif;
 }
 
@@ -54,7 +54,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 .wrapper > div {
   flex-basis: 1 0 auto;
@@ -64,7 +63,7 @@ body {
   color: white;
   text-align: center;
   font-size: 36px;
-  font-weight: 400;
+  font-weight: 100;
 }
 
 .cards {
